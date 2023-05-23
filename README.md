@@ -8,6 +8,7 @@
 
 ##### 2. Components
 * Create a vue component.
+* Nested component.
 <hr>
 
 ## Basic Concept
@@ -40,6 +41,56 @@ export default {
     return{
 
     }
+  }
+}
+</script>
+
+<style>
+
+</style>
+```
+##### 2.2 Nested component
+Create a vue file ``` Profile.vue ``` in components directory and write code like-<br>
+```
+<template>
+  <div>
+    <h1>Profile page</h1>
+  </div>
+</template>
+
+<script>
+export default {
+  name:'Profile',
+  data(){
+
+  }
+}
+</script>
+
+<style>
+
+</style>
+```
+Now load ``` Profile.vue ``` in the ``` Home.vue ``` component
+``` 
+<template>
+  <div>
+    <h1>Home page</h1>
+    <Profile/>
+  </div>
+</template>
+
+<script>
+import Profile from "./Profile.vue";
+export default {
+  name: 'Home',
+  data(){
+    return{
+
+    }
+  },
+  components:{
+    Profile
   }
 }
 </script>
