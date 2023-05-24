@@ -9,6 +9,10 @@
 ##### 2. Components
 * Create a vue component.
 * Nested component.
+
+##### 3. CSS Scoped
+
+
 <hr>
 
 ## Basic Concept
@@ -97,5 +101,32 @@ export default {
 
 <style>
 
+</style>
+```
+
+##### 3. CSS Scoped
+CSS ``` scoped ``` use for effect css style only specific component. <br>
+Example
+```
+<template>
+  <div>
+    <h1>Profile page</h1>
+  </div>
+</template>
+
+<script>
+export default {
+  name:'Profile',
+  data(){
+
+  }
+}
+</script>
+
+<style scoped>
+h1{
+  color: red;
+  font-family: "Roboto Thin";
+}
 </style>
 ```

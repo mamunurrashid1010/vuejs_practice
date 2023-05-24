@@ -13,6 +13,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+h1{
+  color: red;
+  font-family: "Roboto Thin";
+}
 </style>
