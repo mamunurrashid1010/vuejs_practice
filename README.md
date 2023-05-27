@@ -12,6 +12,9 @@
 
 ##### 3. CSS Scoped
 
+##### 4. Props
+* Props example (Parent to child component data passing)
+
 
 <hr>
 
@@ -128,5 +131,75 @@ h1{
   color: red;
   font-family: "Roboto Thin";
 }
+</style>
+```
+
+##### 4. Props
+##### 4.1 Props example (Parent to child component data passing)
+=> Create vue file ``` ParentComponent.vue ``` ``` ChildComponent.vue ``` in components/props directory. <br>
+=> open ``` ParentComponent.vue ``` file and write code like
+```
+<template>
+  <div>
+      <h4>Parent Component</h4>
+      <ChildComponent name="Mamunur Rashid" :testDetails="details" />
+  </div>
+</template>
+
+<script>
+import ChildComponent from "./ChildComponent.vue";
+
+export default {
+  name: 'ParentComponent',
+  data(){
+    return{
+        details:[
+          {'designation':'Software developer', 'experience': '4years'},
+          {'designation':'Rest API developer', 'experience': '2years'},
+          {'designation':'Web Designer', 'experience': '2years'}
+        ],
+    }
+  },
+  components:{
+    ChildComponent,
+  }
+}
+</script>
+
+<style>
+
+</style>
+```
+=> open ``` ChildComponent.vue ``` file and write code like
+```
+<template>
+  <div>
+    <h4>Child Component</h4>
+    <p>Name: {{name}}</p>
+    <p>
+      <span v-for="data in testDetails">
+        Designation: {{data.designation}},
+        Experience: {{data.experience}}
+        <br/>
+      </span>
+    </p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ChildComponent',
+  props:['name','testDetails'],
+  data(){
+    return{
+
+    }
+  },
+
+}
+</script>
+
+<style>
+
 </style>
 ```

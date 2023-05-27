@@ -2,6 +2,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import Profile from "./components/Profile.vue";
 import Home from "./components/Home.vue";
+import ParentComponent from "./components/props/ParentComponent.vue";
 </script>
 
 <template>
@@ -14,6 +15,10 @@ import Home from "./components/Home.vue";
     </a>
   </div>
   <Home/>
+
+  <!-- props example -->
+  <h3 style="color: green">Props Example</h3><hr>
+  <ParentComponent/>
 </template>
 
 <style scoped>
