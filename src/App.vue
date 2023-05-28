@@ -3,6 +3,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import Profile from "./components/Profile.vue";
 import Home from "./components/Home.vue";
 import ParentComponent from "./components/props/ParentComponent.vue";
+import Example1 from "./components/conditional_rendering/Example1.vue";
 </script>
 
 <template>
@@ -19,6 +20,10 @@ import ParentComponent from "./components/props/ParentComponent.vue";
   <!-- props example -->
   <h3 style="color: green">Props Example</h3><hr>
   <ParentComponent/>
+
+  <!-- conditional Rendering example -->
+  <h3 style="color: green">Conditional Rendering Example</h3><hr>
+  <Example1/>
 </template>
 
 <style scoped>

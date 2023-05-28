@@ -15,6 +15,10 @@
 ##### 4. Props
 * Props example (Parent to child component data passing)
 
+##### 5. Conditional Rendering
+* v-if and v-else
+* v-else-if
+
 
 <hr>
 
@@ -196,6 +200,50 @@ export default {
     }
   },
 
+}
+</script>
+
+<style>
+
+</style>
+```
+
+##### 5. Conditional Rendering
+##### 5.1 v-if, v-else and v-else-if example
+Create vue file ``` Example1.vue ```  in components/conditional_rendering directory, then open and write code like- <br>
+```
+<template>
+  <div>
+    <h4>Conditional Rendering Example-1</h4>
+
+    <!-- if-else   -->
+    <p v-if="result" > Pass </p>
+    <p v-else > Fail </p>
+
+    <!-- if-else-if   -->
+    <p v-if="marks >= 80">Marks : {{marks}}, Grade : A+</p>
+    <p v-else-if="marks >= 60 && marks <80">Marks : {{marks}}, Grade : A</p>
+    <p v-else-if="marks >= 40 && marks <60">Marks : {{marks}}, Grade : B</p>
+    <p v-else>Fail, Marks : {{marks}}, Grade : F</p>
+
+  </div>
+</template>
+
+<script>
+export default {
+  name:'Example1',
+  data(){
+    return{
+      result:true,
+      marks: 70,
+    }
+  },
+  components:{
+
+  },
+  methods:{
+
+  }
 }
 </script>
 
