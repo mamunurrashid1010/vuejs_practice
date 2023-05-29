@@ -19,6 +19,8 @@
 * v-if and v-else
 * v-else-if
 
+##### 6. Loop
+* v-for 
 
 <hr>
 
@@ -244,6 +246,47 @@ export default {
   methods:{
 
   }
+}
+</script>
+
+<style>
+
+</style>
+```
+
+##### 6. Loop
+##### 6.1 v-for loop example
+Create vue file ``` loopExample.vue ```  in components/loop directory, then open and write code like- <br>
+```
+<template>
+  <div>
+    <h4>v-for loop example-1</h4>
+    <ul v-for="(data,index) in datas" :key="data.id">
+      <li>
+        Index : {{index}}
+        ID    : {{data.id}}
+        Title : {{data.title}}
+      </li>
+    </ul>
+
+  </div>
+</template>
+
+<script>
+export default{
+  name:'loopExample',
+  data(){
+    return{
+        datas:[
+          {'id':1, title:'test1'},
+          {'id':2, title:'test2'},
+          {'id':3, title:'test3'},
+          {'id':4, title:'test4'},
+          {'id':5, title:'test5'}
+        ],
+    }
+  },
+
 }
 </script>
 

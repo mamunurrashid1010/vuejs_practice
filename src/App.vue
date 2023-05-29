@@ -4,6 +4,7 @@ import Profile from "./components/Profile.vue";
 import Home from "./components/Home.vue";
 import ParentComponent from "./components/props/ParentComponent.vue";
 import Example1 from "./components/conditional_rendering/Example1.vue";
+import LoopExample from "./components/loop/loopExample.vue";
 </script>
 
 <template>
@@ -24,6 +25,10 @@ import Example1 from "./components/conditional_rendering/Example1.vue";
   <!-- conditional Rendering example -->
   <h3 style="color: green">Conditional Rendering Example</h3><hr>
   <Example1/>
+
+  <!-- loop example -->
+  <h3 style="color: green">Loop Example</h3><hr>
+  <loop-example/>
 </template>
 
 <style scoped>
