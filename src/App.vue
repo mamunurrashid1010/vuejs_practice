@@ -5,6 +5,7 @@ import Home from "./components/Home.vue";
 import ParentComponent from "./components/props/ParentComponent.vue";
 import Example1 from "./components/conditional_rendering/Example1.vue";
 import LoopExample from "./components/loop/loopExample.vue";
+import ClickEvent from "./components/event_handling/ClickEvent.vue";
 </script>
 
 <template>
@@ -29,6 +30,10 @@ import LoopExample from "./components/loop/loopExample.vue";
   <!-- loop example -->
   <h3 style="color: green">Loop Example</h3><hr>
   <loop-example/>
+
+  <!-- event handling: click event example -->
+  <h3 style="color: green">Event Handling</h3><hr>
+  <ClickEvent/>
 </template>
 
 <style scoped>
