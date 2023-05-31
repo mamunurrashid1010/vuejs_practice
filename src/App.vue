@@ -6,6 +6,7 @@ import ParentComponent from "./components/props/ParentComponent.vue";
 import Example1 from "./components/conditional_rendering/Example1.vue";
 import LoopExample from "./components/loop/loopExample.vue";
 import ClickEvent from "./components/event_handling/ClickEvent.vue";
+import Example from "./components/lifecycle_hook/Example.vue";
 </script>
 
 <template>
@@ -34,6 +35,10 @@ import ClickEvent from "./components/event_handling/ClickEvent.vue";
   <!-- event handling: click event example -->
   <h3 style="color: green">Event Handling</h3><hr>
   <ClickEvent/>
+
+  <!-- lifecycle hook example -->
+  <h3 style="color: green">Life cycle hook</h3><hr>
+  <!--  <Example/>-->
 </template>
 
 <style scoped>

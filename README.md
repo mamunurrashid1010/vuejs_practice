@@ -25,6 +25,8 @@
 ##### 7. Event Handling
 * Click event example
 
+##### 8. Lifecycle hook
+
 <hr>
 
 ## Basic Concept
@@ -336,5 +338,52 @@ button{
   background-color: #747bff;
   margin-right: 5px;
 }
+</style>
+```
+
+##### 8. Lifecycle hook example
+Create vue file ``` Example.vue ```  in components/lifecycle_hook directory, then open and write code like- <br>
+```
+<template>
+  <div>
+    <h4>Life cycle hook example</h4>
+    <p>Name : {{name}}</p>
+    <button @click="change()">change name</button>
+  </div>
+</template>
+
+<script>
+export default {
+  name:'Example',
+  data(){
+    return{
+        name:'Hasan',
+    }
+  },
+  methods:{
+    change(){
+      this.name = "Mamunur Rashid";
+    }
+  },
+  beforeCreate() {
+    // code write here
+    alert('beforeCreate hook');
+  },
+  created() {
+    // code write here
+    alert('created hook');
+  },
+  beforeUpdate() {
+    alert('beforeUpdate hook');
+  },
+  updated() {
+
+  }
+
+}
+</script>
+
+<style>
+
 </style>
 ```
