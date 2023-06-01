@@ -27,6 +27,8 @@
 
 ##### 8. Lifecycle hook
 
+##### 9. Axios installation
+
 <hr>
 
 ## Basic Concept
@@ -387,3 +389,8 @@ export default {
 
 </style>
 ```
+
+##### 9. Axios Installation 
+``` 
+npm install axios --save
+``` 
