@@ -7,6 +7,7 @@ import Example1 from "./components/conditional_rendering/Example1.vue";
 import LoopExample from "./components/loop/loopExample.vue";
 import ClickEvent from "./components/event_handling/ClickEvent.vue";
 import Example from "./components/lifecycle_hook/Example.vue";
+import GetRequest from "./components/http_request/GetRequest.vue";
 </script>
 
 <template>
@@ -39,6 +40,11 @@ import Example from "./components/lifecycle_hook/Example.vue";
   <!-- lifecycle hook example -->
   <h3 style="color: green">Life cycle hook</h3><hr>
   <!--  <Example/>-->
+
+  <!-- http request example -->
+  <h3 style="color: green">Http request</h3><hr>
+  <GetRequest/>
+
 </template>
 
 <style scoped>

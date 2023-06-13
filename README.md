@@ -31,6 +31,9 @@
 
 ##### 10. <a href="https://github.com/mamunurrashid1010/vue-routing-implement"> Vue routing implement </a>
 
+##### 10. Http Request
+* Get request
+
 <hr>
 
 ## Basic Concept
@@ -396,3 +399,51 @@ export default {
 ``` 
 npm install axios --save
 ``` 
+
+##### 11. Http Request
+##### 11.1 Get request example
+Create a vue file ``` GetRequest.vue ``` file in components/http_request directory and write code like-<br>
+```
+<template>
+  <div>
+    <h4>Http get request example</h4>
+
+    <button @click="getData()">Get</button>
+
+    <div v-for="post in posts">
+        <p v-if="post.id <=10">
+            ID :{{post.id}} <br>
+            Title :{{post.title}}<br>
+            Message :{{post.body}}<br>
+        </p>
+    </div>
+  </div>
+</template>
+
+<script>
+import axios from "axios";
+export default {
+  name:'GetRequest',
+  data(){
+    return{
+        posts:[],
+    }
+  },
+  methods:{
+    getData(){
+      axios.get('https://jsonplaceholder.typicode.com/posts')
+          .then(req=>{
+            this.posts = req.data;
+          })
+          .catch(e=>{
+            alert('Error')
+          })
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
+```
