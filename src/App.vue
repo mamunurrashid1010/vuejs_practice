@@ -8,6 +8,7 @@ import LoopExample from "./components/loop/loopExample.vue";
 import ClickEvent from "./components/event_handling/ClickEvent.vue";
 import Example from "./components/lifecycle_hook/Example.vue";
 import GetRequest from "./components/http_request/GetRequest.vue";
+import PostRequest from "./components/http_request/PostRequest.vue";
 </script>
 
 <template>
@@ -44,6 +45,7 @@ import GetRequest from "./components/http_request/GetRequest.vue";
   <!-- http request example -->
   <h3 style="color: green">Http request</h3><hr>
   <GetRequest/>
+  <PostRequest/>
 
 </template>
 
