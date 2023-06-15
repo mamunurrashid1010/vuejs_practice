@@ -34,6 +34,7 @@
 ##### 10. Http Request
 * Get request
 * Post request
+* Get details
 
 <hr>
 
@@ -486,6 +487,52 @@ export default {
       axios.post('https://jsonplaceholder.typicode.com/posts',this.form)
           .then(req=>{
             alert('success');
+          })
+          .catch(e=>{
+            alert('Error')
+          })
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
+```
+
+##### 11.3 Get detials example
+Create a vue file ``` GetDetails.vue ``` file in components/http_request directory and write code like-<br>
+```
+<template>
+  <div>
+    <h4>Http get details example</h4>
+
+    <button @click="getData()">Get Details</button>
+
+      <p>
+        ID :{{post.id}} <br>
+        Title :{{post.title}}<br>
+        Message :{{post.body}}<br>
+      </p>
+
+  </div>
+</template>
+
+<script>
+import axios from "axios";
+export default {
+  name:'GetDetails',
+  data(){
+    return{
+      post:{},
+    }
+  },
+  methods:{
+    getData(){
+      axios.get('https://jsonplaceholder.typicode.com/posts/1')
+          .then(req=>{
+            this.post = req.data;
           })
           .catch(e=>{
             alert('Error')
