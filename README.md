@@ -31,10 +31,11 @@
 
 ##### 10. <a href="https://github.com/mamunurrashid1010/vue-routing-implement"> Vue routing implement </a>
 
-##### 10. Http Request
+##### 11. Http Request
 * Get request
 * Post request
 * Get details
+* Delete
 
 <hr>
 
@@ -501,7 +502,7 @@ export default {
 </style>
 ```
 
-##### 11.3 Get detials example
+##### 11.3 Get details example
 Create a vue file ``` GetDetails.vue ``` file in components/http_request directory and write code like-<br>
 ```
 <template>
@@ -533,6 +534,56 @@ export default {
       axios.get('https://jsonplaceholder.typicode.com/posts/1')
           .then(req=>{
             this.post = req.data;
+          })
+          .catch(e=>{
+            alert('Error')
+          })
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
+```
+
+##### 11.4 Delete example
+Create a vue file ``` DeleteExample.vue ``` file in components/http_request directory and write code like-<br>
+```
+<template>
+  <div>
+    <h4>Http delete example</h4>
+
+    <p>
+      ID :{{post.id}} <br>
+      Title :{{post.title}}<br>
+      Message :{{post.body}}<br>
+      <button @click="deleteData(post.id)">Delete</button>
+    </p>
+
+  </div>
+</template>
+
+<script>
+import axios from "axios";
+export default {
+  name:'DeleteExample',
+  data(){
+    return{
+      post:{
+        id:1,
+        title:"test title",
+        body:"test desc",
+
+      },
+    }
+  },
+  methods:{
+    deleteData(id){
+      axios.delete('https://jsonplaceholder.typicode.com/posts/'+id)
+          .then(req=>{
+            alert('success')
           })
           .catch(e=>{
             alert('Error')

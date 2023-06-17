@@ -10,6 +10,7 @@ import Example from "./components/lifecycle_hook/Example.vue";
 import GetRequest from "./components/http_request/GetRequest.vue";
 import PostRequest from "./components/http_request/PostRequest.vue";
 import GetDetails from "./components/http_request/GetDetails.vue";
+import DeleteExample from "./components/http_request/DeleteExample.vue";
 </script>
 
 <template>
@@ -48,6 +49,7 @@ import GetDetails from "./components/http_request/GetDetails.vue";
   <GetRequest/>
   <PostRequest/>
   <GetDetails/>
+  <DeleteExample/>
 
 </template>
 
