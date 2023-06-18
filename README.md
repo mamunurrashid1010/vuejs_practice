@@ -37,6 +37,8 @@
 * Get details
 * Delete
 
+##### 12. Child to parent component data passing
+
 <hr>
 
 ## Basic Concept
@@ -589,6 +591,77 @@ export default {
             alert('Error')
           })
     }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
+```
+
+##### 12 Child to parent data passing
+=> Create vue file ``` Parent.vue ``` and ``` Child.vue ``` file in components/child_to_parent_data_passing directory <br>
+
+=> Open ``` Parent.vue ``` and write code like-<br>
+```
+<template>
+  <div>
+    <h4>Parent Component</h4>
+    <p>Title: {{title}}</p>
+    <Child @changeTitle="ChangeT($event)" />
+  </div>
+</template>
+
+<script>
+import Child from "./Child.vue";
+export default {
+  name:'Parent',
+  data(){
+    return{
+        title:'',
+    }
+  },
+  methods:{
+    ChangeT(title){
+      this.title=title;
+    }
+  },
+  components:{
+    Child
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
+```
+
+=> Now Open ``` Child.vue ``` and write code like-<br>
+```
+<template>
+  <div>
+    <h4>Chile Component</h4>
+    <button type="button" @click='passEvent'> Update me</button>
+  </div>
+</template>
+
+<script>
+export default {
+  name:'Child',
+  data(){
+    return{
+      title:'',
+    }
+  },
+  methods:{
+    passEvent(){
+      this.$emit('changeTitle','I am from child component');
+    }
+  },
+  components:{
+
   }
 }
 </script>

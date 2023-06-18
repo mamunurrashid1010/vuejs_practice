@@ -11,6 +11,7 @@ import GetRequest from "./components/http_request/GetRequest.vue";
 import PostRequest from "./components/http_request/PostRequest.vue";
 import GetDetails from "./components/http_request/GetDetails.vue";
 import DeleteExample from "./components/http_request/DeleteExample.vue";
+import Parent from "./components/child_to_parent_data_passsing/Parent.vue";
 </script>
 
 <template>
@@ -50,6 +51,10 @@ import DeleteExample from "./components/http_request/DeleteExample.vue";
   <PostRequest/>
   <GetDetails/>
   <DeleteExample/>
+
+  <!-- child to parent data passing example -->
+  <h3 style="color: green">child to parent data passing</h3><hr>
+  <Parent/>
 
 </template>
 
