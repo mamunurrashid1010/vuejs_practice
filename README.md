@@ -39,6 +39,8 @@
 
 ##### 12. Child to parent component data passing
 
+##### 13. Bootstrap installation and use in a program
+
 <hr>
 
 ## Basic Concept
@@ -669,4 +671,20 @@ export default {
 <style scoped>
 
 </style>
+```
+
+##### 13 Bootstrap installation and use in a program
+Bootstrap install command
+```
+npm install bootstrap@5.3.0
+```
+Open ```main.js``` and Import bootstrap.min.css file from node_modules like- import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+then write code
+```
+import { createApp } from 'vue'
+import './style.css'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import App from './App.vue'
+
+createApp(App).mount('#app')
 ```
