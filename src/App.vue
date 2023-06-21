@@ -13,6 +13,7 @@ import GetDetails from "./components/http_request/GetDetails.vue";
 import DeleteExample from "./components/http_request/DeleteExample.vue";
 import Parent from "./components/child_to_parent_data_passsing/Parent.vue";
 import FormExample from "./components/form/FormExample.vue";
+import Login from "./components/form/Login.vue";
 </script>
 
 <template>
@@ -60,6 +61,7 @@ import FormExample from "./components/form/FormExample.vue";
   <!-- form example -->
   <h3 style="color: green">form example</h3><hr>
   <FormExample/>
+  <Login/>
 
 </template>
 
