@@ -12,6 +12,11 @@
     <p v-else-if="marks >= 40 && marks <60">Marks : {{marks}}, Grade : B</p>
     <p v-else>Fail, Marks : {{marks}}, Grade : F</p>
 
+    <!-- v-show   -->
+    <p v-show="result" >
+      condition is true
+    </p>
+
   </div>
 </template>
 

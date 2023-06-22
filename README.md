@@ -18,6 +18,7 @@
 ##### 5. Conditional Rendering
 * v-if and v-else
 * v-else-if
+* v-show
 
 ##### 6. Loop
 * v-for 
@@ -234,7 +235,7 @@ export default {
 ```
 
 ##### 5. Conditional Rendering
-##### 5.1 v-if, v-else and v-else-if example
+##### 5.1 v-if, v-else, v-else-if and v-show  example
 Create vue file ``` Example1.vue ```  in components/conditional_rendering directory, then open and write code like- <br>
 ```
 <template>
@@ -250,6 +251,11 @@ Create vue file ``` Example1.vue ```  in components/conditional_rendering direct
     <p v-else-if="marks >= 60 && marks <80">Marks : {{marks}}, Grade : A</p>
     <p v-else-if="marks >= 40 && marks <60">Marks : {{marks}}, Grade : B</p>
     <p v-else>Fail, Marks : {{marks}}, Grade : F</p>
+    
+    <!-- v-show   -->
+    <p v-show="result" >
+      condition is true
+    </p>
 
   </div>
 </template>
