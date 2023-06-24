@@ -14,6 +14,7 @@ import DeleteExample from "./components/http_request/DeleteExample.vue";
 import Parent from "./components/child_to_parent_data_passsing/Parent.vue";
 import FormExample from "./components/form/FormExample.vue";
 import Login from "./components/form/Login.vue";
+import KeyupEvent from "./components/event_handling/KeyupEvent.vue";
 </script>
 
 <template>
@@ -42,6 +43,7 @@ import Login from "./components/form/Login.vue";
   <!-- event handling: click event example -->
   <h3 style="color: green">Event Handling</h3><hr>
   <ClickEvent/>
+  <KeyupEvent/>
 
   <!-- lifecycle hook example -->
   <h3 style="color: green">Life cycle hook</h3><hr>

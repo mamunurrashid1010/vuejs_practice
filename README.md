@@ -25,6 +25,7 @@
 
 ##### 7. Event Handling
 * Click event example
+* Keyup event example
 
 ##### 8. Lifecycle hook
 
@@ -362,6 +363,40 @@ button{
   background-color: #747bff;
   margin-right: 5px;
 }
+</style>
+```
+
+##### 7.2 Keyup event example
+Create vue file ``` KeyupEvent.vue ```  in components/event_handling directory, then open and write code like- <br>
+```
+<template>
+  <div>
+
+    <h4>Keyup event example</h4>
+    <p>Name : {{title}}</p>
+    <input type="text" name="" value="" @keyup="nameChange()" />
+
+  </div>
+</template>
+
+<script>
+export default {
+  name:'KeyupEvent',
+  data(){
+    return{
+      title:''
+    }
+  },
+  methods:{
+    nameChange(e){
+      this.title = e.target.value;
+    }
+  }
+}
+</script>
+
+<style>
+
 </style>
 ```
 
