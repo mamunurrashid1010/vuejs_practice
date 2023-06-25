@@ -26,6 +26,7 @@
 ##### 7. Event Handling
 * Click event example
 * Keyup event example
+* Keypress event example
 
 ##### 8. Lifecycle hook
 

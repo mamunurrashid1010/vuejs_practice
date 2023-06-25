@@ -15,6 +15,7 @@ import Parent from "./components/child_to_parent_data_passsing/Parent.vue";
 import FormExample from "./components/form/FormExample.vue";
 import Login from "./components/form/Login.vue";
 import KeyupEvent from "./components/event_handling/KeyupEvent.vue";
+import Keypress from "./components/event_handling/Keypress.vue";
 </script>
 
 <template>
@@ -44,6 +45,7 @@ import KeyupEvent from "./components/event_handling/KeyupEvent.vue";
   <h3 style="color: green">Event Handling</h3><hr>
   <ClickEvent/>
   <KeyupEvent/>
+  <Keypress/>
 
   <!-- lifecycle hook example -->
   <h3 style="color: green">Life cycle hook</h3><hr>
