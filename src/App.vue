@@ -17,6 +17,7 @@ import Login from "./components/form/Login.vue";
 import KeyupEvent from "./components/event_handling/KeyupEvent.vue";
 import Keypress from "./components/event_handling/Keypress.vue";
 import CtrlClick from "./components/event_handling/CtrlClick.vue";
+import Mouseover from "./components/event_handling/Mouseover.vue";
 </script>
 
 <template>
@@ -48,6 +49,7 @@ import CtrlClick from "./components/event_handling/CtrlClick.vue";
   <KeyupEvent/>
   <Keypress/>
   <CtrlClick/>
+  <Mouseover/>
 
   <!-- lifecycle hook example -->
   <h3 style="color: green">Life cycle hook</h3><hr>

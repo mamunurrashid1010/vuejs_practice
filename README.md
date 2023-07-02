@@ -28,6 +28,7 @@
 * Keyup event example
 * Keypress event example
 * Ctrl+Click event example
+* Mouseover event example
 
 ##### 8. Lifecycle hook
 
